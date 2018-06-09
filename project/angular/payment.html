@@ -131,10 +131,56 @@
 
 
     <div class="row setup-content" id="step-2">
-      <div class="col-xs-12">
-        <div class="col-md-12 well">
-          <h1 class="text-center"> 填写个人信息</h1>
-          <button id="activate-step-3" class="btn btn-lg">提交</button>
+
+      <div class="col-md-12 well">
+        <div>
+          <h2>上传护照信息
+          </h2>
+          <p>扫描护照页面上传，否则无法进行购买</p>
+          <div class="col-xs-12 form-group">
+            <form method='PUT' action="https://lflo0jie3l.execute-api.eu-west-1.amazonaws.com/test/image" enctype="multipart/form-data">
+              <input type='file' name='your files' multiple/>
+              <!-- <button type='submit' class="btn btn-lg">上传</button> -->
+            </form>
+          </div>
+          <h2 class="text-center"> 填写个人信息</h2>
+          <form>
+            <div class="col-md-6 col-xs-12">
+              <h4> 个人信息 </h4>
+              <div class="form-group">
+                <label>姓名</label>
+                <input type="name" class="form-control" placeholder="张三" required>
+              </div>
+              <div class="form-group">
+                <label>邮箱</label>
+                <input type="email" class="form-control" placeholder="mobile@example.com" required>
+              </div>
+              <div class="form-group">
+                <label>联系电话</label>
+                <input type="number" class="form-control" placeholder="18609217419" required>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-xs-12">
+              <h4> 邮寄地址 </h4>
+              <div class="form-group">
+                <label>地址</label>
+                <input type="address1" class="form-control" placeholder="1号花园小区邮政路" required>
+              </div>
+              <div class="form-group">
+                <label>省份城市</label>
+                <input type="address2" class="form-control" placeholder="江苏省浙江市" required>
+              </div>
+              <div class="form-group">
+                <label>邮编</label>
+                <input type="postcode" class="form-control" placeholder="300000" required>
+              </div>
+            </div>
+
+            <div class="col-xs-12">
+              <button type='submit' id='activate-step-3' class="btn btn-lg">确认提交</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
